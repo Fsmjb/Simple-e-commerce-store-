@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <link rel="stylesheet" href="/style/header.css">
+    <link rel="stylesheet" href="/style/addProduct.css">
+    
+</head>
+<body>
+    <%- include("./partials/header") %>
+    <main>
+        <div>
+            <form action="/add/submit" method="POST" enctype="multipart/form-data">
+                <img id="imagePreview">
+                <label>Image : </label>
+                <input type="file" name="image" id="imageInput" required onchange="previewImage(event)"> 
+                <label>Name : </label>
+                <input type="text" name="name" required>
+                <label>Price : </label>
+                <input type="number" name="price" required>
+               <button type="submit">Add</button>
+            </form>
+        </div>
+    </main>
+    <%- include("./partials/footer") %>
+</body>
+</html>
+<script src="/js/add.js"></script>

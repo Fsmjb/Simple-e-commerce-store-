@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    min-height: 100vh;
+    font-size: 16px;
+}
+
+main {
+    margin-top: 60px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 30px;
+}
+
+label {
+    grid-column: 1;
+    align-self: center;
+    padding-left: 20px;
+}
+
+input {
+    grid-column: 2 / span 3;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 4px;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(21, 231, 231, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(21, 231, 231);
+}
+
+img{
+    grid-column: 2/3;
+    display: none;
+    width: 400px;
+    height: 400px;
+}

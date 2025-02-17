@@ -1,0 +1,44 @@
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: skyblue;
+    position: fixed;
+    top: 0px;
+}
+
+.flex-center{
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 8px;
+}
+
+.logo{
+    margin-left: 40px;
+    font-size: 30px;
+    color: black;
+}
+
+#cart{
+    width: 30px;
+    height: 30px;
+    margin-right: 40px;
+}
+
+footer{
+    text-align: center;
+    background-color: black;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    padding: 10px;
+}
+
+footer a{
+    color: white;
+}
+
+footer a:hover{
+    color: rgb(18, 52, 245);
+}
