@@ -16,7 +16,22 @@ const productSchema = new mongoose.Schema({
     },
 });
 
-const productModel = mongoose.model("Product", productSchema);
+const cartSchema = new mongoose.Schema({
+    productId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Product"
+    },
+    quantity: {
+        type: Number,
+        default: 1
+    }
+})
 
-export default productModel;
+const productModel = mongoose.model("Product", productSchema);
+const cartModel = mongoose.model("Cart", cartSchema);
+
+export {
+    productModel,
+    cartModel
+};
 

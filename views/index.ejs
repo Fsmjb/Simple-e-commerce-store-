@@ -16,22 +16,119 @@
             <p>The world best product selling store</p>
             <a href="#"><button>Explore</button></a>
         </div>
+    <div>
 
        <% if(locals.data){ %>
         <div class="product">
+
             <% data.forEach(function(data) { %>
                 <div class="card">
-                    <img src="/productimage/<%=data.imageUrl %>" alt="">
+                    <img src="/productimage/<%= data.imageUrl %>" alt="">
                     <h3><%= data.name %></h3>
-                    <h3><%= data.price %></h3>
-                    <button>Add to cart</button>
+                    <h3>Rs.<%= data.price %></h3>
+                    <button onclick="addtocart('<%= data._id %>')">Add to cart</button>
                 </div>
             <% }) %>
+            <% data.forEach(function(data) { %>
+                <div class="card">
+                    <img src="/productimage/<%= data.imageUrl %>" alt="">
+                    <h3><%= data.name %></h3>
+                    <h3>Rs.<%= data.price %></h3>
+                    <button onclick="addtocart('<%= data._id %>')">Add to cart</button>
+                </div>
+            <% }) %>
+            <% data.forEach(function(data) { %>
+                <div class="card">
+                    <img src="/productimage/<%= data.imageUrl %>" alt="">
+                    <h3><%= data.name %></h3>
+                    <h3>Rs.<%= data.price %></h3>
+                    <button onclick="addtocart('<%= data._id %>')">Add to cart</button>
+                </div>
+            <% }) %>
+            <% data.forEach(function(data) { %>
+                <div class="card">
+                    <img src="/productimage/<%= data.imageUrl %>" alt="">
+                    <h3><%= data.name %></h3>
+                    <h3>Rs.<%= data.price %></h3>
+                    <button onclick="addtocart('<%= data._id %>')">Add to cart</button>
+                </div>
+            <% }) %>
+            <% data.forEach(function(data) { %>
+                <div class="card">
+                    <img src="/productimage/<%= data.imageUrl %>" alt="">
+                    <h3><%= data.name %></h3>
+                    <h3>Rs.<%= data.price %></h3>
+                    <button onclick="addtocart('<%= data._id %>')">Add to cart</button>
+                </div>
+            <% }) %>
+            <% data.forEach(function(data) { %>
+                <div class="card">
+                    <img src="/productimage/<%= data.imageUrl %>" alt="">
+                    <h3><%= data.name %></h3>
+                    <h3>Rs.<%= data.price %></h3>
+                    <button onclick="addtocart('<%= data._id %>')">Add to cart</button>
+                </div>
+            <% }) %>
+            <% data.forEach(function(data) { %>
+                <div class="card">
+                    <img src="/productimage/<%= data.imageUrl %>" alt="">
+                    <h3><%= data.name %></h3>
+                    <h3>Rs.<%= data.price %></h3>
+                    <button onclick="addtocart('<%= data._id %>')">Add to cart</button>
+                </div>
+            <% }) %>
+            <% data.forEach(function(data) { %>
+                <div class="card">
+                    <img src="/productimage/<%= data.imageUrl %>" alt="">
+                    <h3><%= data.name %></h3>
+                    <h3>Rs.<%= data.price %></h3>
+                    <button onclick="addtocart('<%= data._id %>')">Add to cart</button>
+                </div>
+            <% }) %>
+            <% data.forEach(function(data) { %>
+                <div class="card">
+                    <img src="/productimage/<%= data.imageUrl %>" alt="">
+                    <h3><%= data.name %></h3>
+                    <h3>Rs.<%= data.price %></h3>
+                    <button onclick="addtocart('<%= data._id %>')">Add to cart</button>
+                </div>
+            <% }) %>
+            <% data.forEach(function(data) { %>
+                <div class="card">
+                    <img src="/productimage/<%= data.imageUrl %>" alt="">
+                    <h3><%= data.name %></h3>
+                    <h3>Rs.<%= data.price %></h3>
+                    <button onclick="addtocart('<%= data._id %>')">Add to cart</button>
+                </div>
+            <% }) %>
+            
+            
         </div>
        <% } %>
+    </div>
+
+    <div class="cart-div hidden">
+        <% if (locals.cart) { %>
+            <% cart.forEach(function(data) { %>
+                <div class="cart-card">
+                    <img src="/productimage/<%= data.productId.imageUrl %>" alt="<%= data.productId.name %>" />
+                    <h3 class="name"><%=data.productId.name %></h3>
+                    <p class="price">Price: <%= data.productId.price %></p>
+                    <p class="quantity">Quantity: <%= data.quantity %></p>
+                    <button onclick="remove(`<%=data._id%>`)" class="remove">remove</button>
+                    <button class="add" onclick="increase(`<%=data._id%>`)">+</button>
+                    <button class="sub" onclick="decrease(`<%=data._id%>`)">-</button>
+                    
+                </div>
+            <% }) %>
+        <% } %>
+        
+    </div>
     </main>
     
     <%- include("./partials/footer.ejs") %>
 
 </body>
 </html>
+
+<script src="/js/index.js"></script>
