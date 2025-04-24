@@ -58,26 +58,7 @@ A basic e-commerce web application built with **Node.js, Express, EJS, MongoDB**
 ## 🖼️ Screenshots (Optional)
 *(Add a few screenshots of your app here, e.g., product page, cart page.)*  
 
-## 📂 Project Structure
-```
-ecommerce-app/
-├── models/            # MongoDB models (Product, Cart, User)
-│   ├── Product.js
-│   └── Cart.js
-├── views/             # EJS templates
-│   ├── products/
-│   ├── cart/
-│   └── layouts/
-├── public/            # Static files (CSS, JS, images)
-│   ├── css/
-│   └── js/
-├── routes/            # Express routes
-│   ├── productRoutes.js
-│   └── cartRoutes.js
-├── app.js             # Main Express app
-├── .env               # Environment variables
-└── package.json
-```
+
 
 ## 🌟 Future Improvements
 - User authentication (Signup/Login)  
@@ -94,5 +75,3 @@ Pull requests are welcome! Open an issue first to discuss changes.
 This project is licensed under the **MIT License**.  
 
 ---
-
-This `README` gives a clear overview of your project. Adjust sections (like **Features**, **Screenshots**, or **Future Improvements**) based on what you’ve implemented. Let me know if you’d like to refine any part! 😊
